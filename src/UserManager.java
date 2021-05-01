@@ -1,12 +1,22 @@
 
 public class UserManager {
-	public void addUser(User user) {
+	public void add(User user) {
 		System.out.println(user.getFirstName()+ " " + user.getLastName() +"-"+ user.getEmail() + " eklendi.");
+		
+	}
+	
+	public void add2(UserManager userManager) {
+		System.out.println("User added");
+		userManager.list();
 	}
 	
 	public void addMultipleUsers(User[] users) {
 		for (User user : users) {
-			addUser(user);
+			add(user);
 		}
+	}
+	
+	public void list() {
+		System.out.println("User listed");
 	}
 }

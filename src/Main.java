@@ -1,10 +1,13 @@
 
 public class Main {
 
+	/**
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		Instructor engin = new Instructor();
-		engin.setCertificates("MCT,PMP,ITIL");
+		
 		engin.setFirstName("Engin");
 		engin.setLastName("Demiroğ");
 		engin.setEmail("engin@engin.com");
@@ -22,12 +25,22 @@ public class Main {
 		
 		UserManager userManager = new UserManager();
 		userManager.addMultipleUsers(users);
+		userManager.list();
+		userManager.add2(new StudentManager());
+		
+		System.out.println("-------------------------");
 		
 		InstructorManager instructorManager = new InstructorManager();
 		instructorManager.addCertificate("MCT");
+		instructorManager.list();
+		instructorManager.add(berkay2);
+		instructorManager.add2(new InstructorManager());
+		
+		System.out.println("-------------------------");
 		
 		StudentManager studentManager = new StudentManager();
 		studentManager.addAchievedCertificate("C# & Angular");
+		studentManager.list();
 		
 		
 	}
